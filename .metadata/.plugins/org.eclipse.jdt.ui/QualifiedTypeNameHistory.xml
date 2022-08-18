@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="org.eclipse.swt.layout.FormAttachment"/>
+    <fullyQualifiedTypeName name="org.eclipse.swt.widgets.Shell"/>
+    <fullyQualifiedTypeName name="org.eclipse.swt.widgets.Listener"/>
+    <fullyQualifiedTypeName name="org.eclipse.swt.widgets.Text"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="org.eclipse.swt.widgets.Composite"/>
+    <fullyQualifiedTypeName name="models.Level"/>
+    <fullyQualifiedTypeName name="org.eclipse.swt.layout.GridData"/>
+    <fullyQualifiedTypeName name="org.eclipse.swt.graphics.Color"/>
+    <fullyQualifiedTypeName name="org.eclipse.swt.SWT"/>
+    <fullyQualifiedTypeName name="org.eclipse.swt.widgets.Button"/>
+    <fullyQualifiedTypeName name="java.util.Collection"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="org.eclipse.swt.events.SelectionListener"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.lang.Runnable"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="models.ButtonWithNumber"/>
+    <fullyQualifiedTypeName name="java.lang.Thread"/>
+    <fullyQualifiedTypeName name="org.eclipse.swt.widgets.Display"/>
+    <fullyQualifiedTypeName name="org.eclipse.swt.widgets.Label"/>
+    <fullyQualifiedTypeName name="org.eclipse.swt.layout.FormData"/>
+    <fullyQualifiedTypeName name="java.util.jar.Attributes.Name"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+</qualifiedTypeNameHistroy>

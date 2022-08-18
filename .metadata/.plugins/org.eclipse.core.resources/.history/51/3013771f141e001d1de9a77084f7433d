@@ -1,0 +1,76 @@
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.layout.FormAttachment;
+import org.eclipse.swt.layout.FormData;
+import org.eclipse.swt.layout.FormLayout;
+import org.eclipse.swt.widgets.Button;
+import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Display;
+import org.eclipse.swt.widgets.Event;
+import org.eclipse.swt.widgets.Listener;
+import org.eclipse.swt.widgets.Shell;
+
+public class GameApplication {
+
+	public static void main(String[] args) {
+
+		Display display = new Display();
+		GameApplication app = new GameApplication();
+		app.open(display);
+	}
+
+	public void open(Display display) {
+		Shell shell = new Shell();
+		shell.addListener(SWT.RESIZE, new Listener() {
+
+			@Override
+			public void handleEvent(Event event) {
+				shell.requestLayout();
+				shell.redraw();
+			}
+		});
+
+		shell.setText("Pairs Memory Game");
+		shell.setLayout(new FormLayout());
+
+		Composite buttons = createButtonLayout(shell);
+		createButtons(buttons);
+
+		shell.setSize(800, 500);
+		shell.open();
+		shell.layout();
+		while (!shell.isDisposed()) {
+			if (!display.readAndDispatch()) {
+				display.sleep();
+			}
+		}
+	}
+
+	private Composite createButtonLayout(Shell shell) {
+		Composite buttons = new Composite(shell, SWT.BORDER);
+		FormData fdButtons = new FormData();
+		fdButtons.left = new FormAttachment(0);
+		fdButtons.right = new FormAttachment(100);
+		fdButtons.top = new FormAttachment(100, -60);
+		fdButtons.bottom = new FormAttachment(100);
+		buttons.setLayout(new FormLayout());
+		buttons.setLayoutData(fdButtons);
+		return buttons;
+	}
+
+	private void createButtons(Composite buttons) {
+		Button startButton = new Button(buttons, SWT.PUSH);
+		startButton.setText("Start");
+		Button leaderBoardButton = new Button(buttons, SWT.PUSH);
+		leaderBoardButton.setText("LeaderBoard");
+		FormData fd = new FormData();
+		fd.left = new FormAttachment(buttons, 20);
+		fd.top = new FormAttachment(buttons, 10);
+		startButton.setLayoutData(fd);
+
+		FormData fd2 = new FormData();
+		fd2.right = new FormAttachment(buttons, -20);
+		fd2.top = new FormAttachment(buttons, 10);
+		leaderBoardButton.setLayoutData(fd2);
+	}
+
+}

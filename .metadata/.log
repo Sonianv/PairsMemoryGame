@@ -1,0 +1,708 @@
+!SESSION 2022-08-17 12:18:57.717 -----------------------------------------------
+eclipse.buildId=4.21.0.I20210906-0500
+java.version=17
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.jface 2 0 2022-08-17 12:19:25.064
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-08-17 12:19:25.065
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@75aa7703,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@79777da7,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2022-08-17 12:19:37.217
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Sonia'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.ui.ide 4 4 2022-08-17 12:21:25.360
+!MESSAGE Not properly disposed SWT resource
+!STACK 0
+java.lang.Error: SWT Resource was not properly disposed
+	at org.eclipse.swt.graphics.Resource.initNonDisposeTracking(Resource.java:172)
+	at org.eclipse.swt.graphics.Resource.<init>(Resource.java:120)
+	at org.eclipse.swt.graphics.Image.<init>(Image.java:498)
+	at org.eclipse.e4.ui.workbench.renderers.swt.CTabRendering.createShadow(CTabRendering.java:908)
+	at org.eclipse.e4.ui.workbench.renderers.swt.CTabRendering.setShadowColor(CTabRendering.java:1052)
+	at org.eclipse.e4.ui.css.swt.dom.CTabFolderElement.reset(CTabFolderElement.java:136)
+	at org.eclipse.e4.ui.css.swt.engine.AbstractCSSSWTEngineImpl.reset(AbstractCSSSWTEngineImpl.java:126)
+	at org.eclipse.e4.ui.css.swt.internal.theme.ThemeEngine.setTheme(ThemeEngine.java:453)
+	at org.eclipse.e4.ui.css.swt.internal.theme.ThemeEngine.setTheme(ThemeEngine.java:434)
+	at org.eclipse.ui.internal.dialogs.ViewsPreferencePage.performOk(ViewsPreferencePage.java:268)
+	at org.eclipse.jface.preference.PreferenceDialog$7.run(PreferenceDialog.java:905)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:174)
+	at org.eclipse.jface.preference.PreferenceDialog.okPressed(PreferenceDialog.java:889)
+	at org.eclipse.ui.internal.dialogs.FilteredPreferenceDialog.okPressed(FilteredPreferenceDialog.java:461)
+	at org.eclipse.jface.preference.PreferenceDialog.buttonPressed(PreferenceDialog.java:233)
+	at org.eclipse.jface.dialogs.Dialog.lambda$0(Dialog.java:619)
+	at org.eclipse.swt.events.SelectionListener$1.widgetSelected(SelectionListener.java:84)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:252)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4237)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1060)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4054)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3626)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:823)
+	at org.eclipse.jface.window.Window.open(Window.java:799)
+	at org.eclipse.ui.internal.OpenPreferencesAction.run(OpenPreferencesAction.java:66)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:474)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:580)
+	at org.eclipse.jface.action.ActionContributionItem.lambda$4(ActionContributionItem.java:414)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4237)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1060)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4054)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3626)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1041)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1440)
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2022-08-17 12:22:39.787
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 4 10050 2022-08-17 12:22:39.787
+!MESSAGE Cannot complete the request.  See the error log for details.
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10004 2022-08-17 12:22:39.787
+!MESSAGE "WindowBuilder Core" will be ignored because a newer version is already installed. 
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10004 2022-08-17 12:22:39.787
+!MESSAGE "SWT Designer Core" will be ignored because a newer version is already installed. 
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10004 2022-08-17 12:22:39.787
+!MESSAGE "SWT Designer" will be ignored because a newer version is already installed. 
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10004 2022-08-17 12:22:39.787
+!MESSAGE "SWT Designer XWT Support (requires Eclipse WTP/WST)" will be ignored because a newer version is already installed. 
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10004 2022-08-17 12:22:39.787
+!MESSAGE "WindowBuilder XML Core (requires Eclipse WTP/WST)" will be ignored because a newer version is already installed. 
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10004 2022-08-17 12:22:39.787
+!MESSAGE "WindowBuilder Java Core" will be ignored because a newer version is already installed. 
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10004 2022-08-17 12:22:39.787
+!MESSAGE "WindowBuilder Core Documentation" will be ignored because a newer version is already installed. 
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10004 2022-08-17 12:22:39.787
+!MESSAGE "WindowBuilder Core UI" will be ignored because a newer version is already installed. 
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10004 2022-08-17 12:22:39.787
+!MESSAGE "WindowBuilder GroupLayout Support" will be ignored because a newer version is already installed. 
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10004 2022-08-17 12:22:39.787
+!MESSAGE "SWT Designer SWT_AWT Support" will be ignored because a newer version is already installed. 
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10004 2022-08-17 12:22:39.787
+!MESSAGE "SWT Designer Documentation" will be ignored because a newer version is already installed. 
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2022-08-17 12:22:39.813
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 4 10050 2022-08-17 12:22:39.814
+!MESSAGE Cannot complete the request.  See the error log for details.
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10004 2022-08-17 12:22:39.814
+!MESSAGE "WindowBuilder Core" will be ignored because a newer version is already installed. 
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10004 2022-08-17 12:22:39.814
+!MESSAGE "SWT Designer Core" will be ignored because a newer version is already installed. 
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10004 2022-08-17 12:22:39.814
+!MESSAGE "SWT Designer" will be ignored because a newer version is already installed. 
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10004 2022-08-17 12:22:39.814
+!MESSAGE "SWT Designer XWT Support (requires Eclipse WTP/WST)" will be ignored because a newer version is already installed. 
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10004 2022-08-17 12:22:39.814
+!MESSAGE "WindowBuilder XML Core (requires Eclipse WTP/WST)" will be ignored because a newer version is already installed. 
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10004 2022-08-17 12:22:39.814
+!MESSAGE "WindowBuilder Java Core" will be ignored because a newer version is already installed. 
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10004 2022-08-17 12:22:39.814
+!MESSAGE "WindowBuilder Core Documentation" will be ignored because a newer version is already installed. 
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10004 2022-08-17 12:22:39.814
+!MESSAGE "WindowBuilder Core UI" will be ignored because a newer version is already installed. 
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10004 2022-08-17 12:22:39.814
+!MESSAGE "WindowBuilder GroupLayout Support" will be ignored because a newer version is already installed. 
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10004 2022-08-17 12:22:39.814
+!MESSAGE "SWT Designer SWT_AWT Support" will be ignored because a newer version is already installed. 
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10004 2022-08-17 12:22:39.814
+!MESSAGE "SWT Designer Documentation" will be ignored because a newer version is already installed. 
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2022-08-17 12:22:39.876
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 4 10050 2022-08-17 12:22:39.876
+!MESSAGE Cannot complete the request.  See the error log for details.
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10004 2022-08-17 12:22:39.877
+!MESSAGE "WindowBuilder Core" will be ignored because a newer version is already installed. 
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10004 2022-08-17 12:22:39.877
+!MESSAGE "SWT Designer Core" will be ignored because a newer version is already installed. 
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10004 2022-08-17 12:22:39.877
+!MESSAGE "SWT Designer" will be ignored because a newer version is already installed. 
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10004 2022-08-17 12:22:39.877
+!MESSAGE "SWT Designer XWT Support (requires Eclipse WTP/WST)" will be ignored because a newer version is already installed. 
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10004 2022-08-17 12:22:39.877
+!MESSAGE "WindowBuilder XML Core (requires Eclipse WTP/WST)" will be ignored because a newer version is already installed. 
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10004 2022-08-17 12:22:39.877
+!MESSAGE "WindowBuilder Java Core" will be ignored because a newer version is already installed. 
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10004 2022-08-17 12:22:39.877
+!MESSAGE "WindowBuilder Core Documentation" will be ignored because a newer version is already installed. 
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10004 2022-08-17 12:22:39.877
+!MESSAGE "WindowBuilder Core UI" will be ignored because a newer version is already installed. 
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10004 2022-08-17 12:22:39.877
+!MESSAGE "WindowBuilder GroupLayout Support" will be ignored because a newer version is already installed. 
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10004 2022-08-17 12:22:39.877
+!MESSAGE "SWT Designer SWT_AWT Support" will be ignored because a newer version is already installed. 
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10004 2022-08-17 12:22:39.877
+!MESSAGE "SWT Designer Documentation" will be ignored because a newer version is already installed. 
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2022-08-17 12:22:39.879
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 4 10050 2022-08-17 12:22:39.879
+!MESSAGE Cannot complete the request.  See the error log for details.
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10004 2022-08-17 12:22:39.879
+!MESSAGE "WindowBuilder Core" will be ignored because a newer version is already installed. 
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10004 2022-08-17 12:22:39.879
+!MESSAGE "SWT Designer Core" will be ignored because a newer version is already installed. 
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10004 2022-08-17 12:22:39.881
+!MESSAGE "SWT Designer" will be ignored because a newer version is already installed. 
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10004 2022-08-17 12:22:39.881
+!MESSAGE "SWT Designer XWT Support (requires Eclipse WTP/WST)" will be ignored because a newer version is already installed. 
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10004 2022-08-17 12:22:39.881
+!MESSAGE "WindowBuilder XML Core (requires Eclipse WTP/WST)" will be ignored because a newer version is already installed. 
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10004 2022-08-17 12:22:39.881
+!MESSAGE "WindowBuilder Java Core" will be ignored because a newer version is already installed. 
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10004 2022-08-17 12:22:39.881
+!MESSAGE "WindowBuilder Core Documentation" will be ignored because a newer version is already installed. 
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10004 2022-08-17 12:22:39.881
+!MESSAGE "WindowBuilder Core UI" will be ignored because a newer version is already installed. 
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10004 2022-08-17 12:22:39.881
+!MESSAGE "WindowBuilder GroupLayout Support" will be ignored because a newer version is already installed. 
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10004 2022-08-17 12:22:39.881
+!MESSAGE "SWT Designer SWT_AWT Support" will be ignored because a newer version is already installed. 
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10004 2022-08-17 12:22:39.881
+!MESSAGE "SWT Designer Documentation" will be ignored because a newer version is already installed. 
+
+!ENTRY org.eclipse.equinox.p2.artifact.repository 4 0 2022-08-17 12:23:02.925
+!MESSAGE Unexpected error loading extension: org.eclipse.equinox.p2.artifact.repository.compositeRepository
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.osgi.framework.BundleContext.createFilter(String)" because "context" is null
+	at org.osgi.util.tracker.ServiceTracker.<init>(ServiceTracker.java:187)
+	at org.osgi.util.tracker.ServiceTracker.<init>(ServiceTracker.java:250)
+	at org.eclipse.ecf.internal.provider.filetransfer.httpclient45.Activator.getHttpClientFactory(Activator.java:241)
+	at org.eclipse.ecf.internal.provider.filetransfer.httpclient45.Activator.getBrowseHttpClient(Activator.java:266)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientBrowseFileTransferFactory$1.sendBrowseRequest(HttpClientBrowseFileTransferFactory.java:59)
+	at org.eclipse.ecf.provider.filetransfer.browse.MultiProtocolFileSystemBrowserAdapter.sendBrowseRequest(MultiProtocolFileSystemBrowserAdapter.java:97)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileInfoReader.sendBrowseRequest(FileInfoReader.java:184)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileInfoReader.getRemoteFiles(FileInfoReader.java:109)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileInfoReader.getRemoteFile(FileInfoReader.java:125)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileInfoReader.getLastModified(FileInfoReader.java:130)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.getLastModified(RepositoryTransport.java:249)
+	at org.eclipse.oomph.p2.internal.core.CachingTransport.delegateGetLastModified(CachingTransport.java:397)
+	at org.eclipse.oomph.p2.internal.core.CachingTransport.getLastModified(CachingTransport.java:346)
+	at org.eclipse.equinox.internal.p2.repository.CacheManager.getLastModified(CacheManager.java:276)
+	at org.eclipse.equinox.internal.p2.repository.CacheManager.createCache(CacheManager.java:230)
+	at org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepositoryFactory.getLocalFile(CompositeArtifactRepositoryFactory.java:71)
+	at org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepositoryFactory.load(CompositeArtifactRepositoryFactory.java:95)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.factoryLoad(ArtifactRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:787)
+	at jdk.internal.reflect.GeneratedMethodAccessor51.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:119)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:447)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:230)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Artifact.loadRepository(CachingRepositoryManager.java:586)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.loadRepository(ArtifactRepositoryManager.java:131)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.loadRepository(ArtifactRepositoryManager.java:125)
+	at org.eclipse.equinox.p2.engine.ProvisioningContext.getLoadedRepository(ProvisioningContext.java:189)
+	at org.eclipse.equinox.p2.engine.ProvisioningContext.getLoadedArtifactRepositories(ProvisioningContext.java:163)
+	at org.eclipse.equinox.p2.engine.ProvisioningContext.getArtifactRepositories(ProvisioningContext.java:149)
+	at org.eclipse.equinox.internal.p2.engine.DownloadManager.getArtifactRepositories(DownloadManager.java:110)
+	at org.eclipse.equinox.internal.p2.engine.DownloadManager.start(DownloadManager.java:95)
+	at org.eclipse.equinox.internal.p2.engine.phases.Collect.completePhase(Collect.java:111)
+	at org.eclipse.equinox.internal.p2.engine.Phase.postPerform(Phase.java:254)
+	at org.eclipse.equinox.internal.p2.engine.Phase.perform(Phase.java:105)
+	at org.eclipse.equinox.internal.p2.engine.PhaseSet.perform(PhaseSet.java:50)
+	at org.eclipse.equinox.internal.p2.engine.Engine.perform(Engine.java:80)
+	at org.eclipse.equinox.internal.p2.engine.Engine.perform(Engine.java:48)
+	at org.eclipse.equinox.p2.operations.ProvisioningSession.performProvisioningPlan(ProvisioningSession.java:181)
+	at org.eclipse.equinox.p2.operations.ProfileModificationJob.runModal(ProfileModificationJob.java:76)
+	at org.eclipse.equinox.p2.operations.ProvisioningJob.run(ProvisioningJob.java:188)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.equinox.p2.artifact.repository 4 0 2022-08-17 12:23:02.930
+!MESSAGE Unexpected error loading extension: org.eclipse.equinox.p2.artifact.repository.simpleRepository
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.osgi.framework.BundleContext.createFilter(String)" because "context" is null
+	at org.osgi.util.tracker.ServiceTracker.<init>(ServiceTracker.java:187)
+	at org.osgi.util.tracker.ServiceTracker.<init>(ServiceTracker.java:250)
+	at org.eclipse.ecf.internal.provider.filetransfer.httpclient45.Activator.getHttpClientFactory(Activator.java:241)
+	at org.eclipse.ecf.internal.provider.filetransfer.httpclient45.Activator.getBrowseHttpClient(Activator.java:266)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientBrowseFileTransferFactory$1.sendBrowseRequest(HttpClientBrowseFileTransferFactory.java:59)
+	at org.eclipse.ecf.provider.filetransfer.browse.MultiProtocolFileSystemBrowserAdapter.sendBrowseRequest(MultiProtocolFileSystemBrowserAdapter.java:97)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileInfoReader.sendBrowseRequest(FileInfoReader.java:184)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileInfoReader.getRemoteFiles(FileInfoReader.java:109)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileInfoReader.getRemoteFile(FileInfoReader.java:125)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileInfoReader.getLastModified(FileInfoReader.java:130)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.getLastModified(RepositoryTransport.java:249)
+	at org.eclipse.oomph.p2.internal.core.CachingTransport.delegateGetLastModified(CachingTransport.java:397)
+	at org.eclipse.oomph.p2.internal.core.CachingTransport.getLastModified(CachingTransport.java:346)
+	at org.eclipse.equinox.internal.p2.repository.CacheManager.getLastModified(CacheManager.java:276)
+	at org.eclipse.equinox.internal.p2.repository.CacheManager.createCache(CacheManager.java:230)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepositoryFactory.getLocalFile(SimpleArtifactRepositoryFactory.java:68)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepositoryFactory.load(SimpleArtifactRepositoryFactory.java:92)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepositoryFactory.load(SimpleArtifactRepositoryFactory.java:80)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.factoryLoad(ArtifactRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:787)
+	at jdk.internal.reflect.GeneratedMethodAccessor51.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:119)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:447)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:230)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Artifact.loadRepository(CachingRepositoryManager.java:586)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.loadRepository(ArtifactRepositoryManager.java:131)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.loadRepository(ArtifactRepositoryManager.java:125)
+	at org.eclipse.equinox.p2.engine.ProvisioningContext.getLoadedRepository(ProvisioningContext.java:189)
+	at org.eclipse.equinox.p2.engine.ProvisioningContext.getLoadedArtifactRepositories(ProvisioningContext.java:163)
+	at org.eclipse.equinox.p2.engine.ProvisioningContext.getArtifactRepositories(ProvisioningContext.java:149)
+	at org.eclipse.equinox.internal.p2.engine.DownloadManager.getArtifactRepositories(DownloadManager.java:110)
+	at org.eclipse.equinox.internal.p2.engine.DownloadManager.start(DownloadManager.java:95)
+	at org.eclipse.equinox.internal.p2.engine.phases.Collect.completePhase(Collect.java:111)
+	at org.eclipse.equinox.internal.p2.engine.Phase.postPerform(Phase.java:254)
+	at org.eclipse.equinox.internal.p2.engine.Phase.perform(Phase.java:105)
+	at org.eclipse.equinox.internal.p2.engine.PhaseSet.perform(PhaseSet.java:50)
+	at org.eclipse.equinox.internal.p2.engine.Engine.perform(Engine.java:80)
+	at org.eclipse.equinox.internal.p2.engine.Engine.perform(Engine.java:48)
+	at org.eclipse.equinox.p2.operations.ProvisioningSession.performProvisioningPlan(ProvisioningSession.java:181)
+	at org.eclipse.equinox.p2.operations.ProfileModificationJob.runModal(ProfileModificationJob.java:76)
+	at org.eclipse.equinox.p2.operations.ProvisioningJob.run(ProvisioningJob.java:188)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.equinox.p2.artifact.repository 4 0 2022-08-17 12:23:02.946
+!MESSAGE Unexpected error loading extension: org.eclipse.equinox.p2.updatesite.artifactRepository
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.osgi.framework.BundleContext.getDataFile(String)" because the return value of "org.eclipse.equinox.internal.p2.updatesite.Activator.getBundleContext()" is null
+	at org.eclipse.equinox.internal.p2.updatesite.metadata.UpdateSiteMetadataRepositoryFactory.getLocalRepositoryLocation(UpdateSiteMetadataRepositoryFactory.java:40)
+	at org.eclipse.equinox.internal.p2.updatesite.artifact.UpdateSiteArtifactRepositoryFactory.loadRepository(UpdateSiteArtifactRepositoryFactory.java:89)
+	at org.eclipse.equinox.internal.p2.updatesite.artifact.UpdateSiteArtifactRepositoryFactory.load(UpdateSiteArtifactRepositoryFactory.java:59)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.factoryLoad(ArtifactRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:787)
+	at jdk.internal.reflect.GeneratedMethodAccessor51.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:119)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:447)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:230)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Artifact.loadRepository(CachingRepositoryManager.java:586)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.loadRepository(ArtifactRepositoryManager.java:131)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.loadRepository(ArtifactRepositoryManager.java:125)
+	at org.eclipse.equinox.p2.engine.ProvisioningContext.getLoadedRepository(ProvisioningContext.java:189)
+	at org.eclipse.equinox.p2.engine.ProvisioningContext.getLoadedArtifactRepositories(ProvisioningContext.java:163)
+	at org.eclipse.equinox.p2.engine.ProvisioningContext.getArtifactRepositories(ProvisioningContext.java:149)
+	at org.eclipse.equinox.internal.p2.engine.DownloadManager.getArtifactRepositories(DownloadManager.java:110)
+	at org.eclipse.equinox.internal.p2.engine.DownloadManager.start(DownloadManager.java:95)
+	at org.eclipse.equinox.internal.p2.engine.phases.Collect.completePhase(Collect.java:111)
+	at org.eclipse.equinox.internal.p2.engine.Phase.postPerform(Phase.java:254)
+	at org.eclipse.equinox.internal.p2.engine.Phase.perform(Phase.java:105)
+	at org.eclipse.equinox.internal.p2.engine.PhaseSet.perform(PhaseSet.java:50)
+	at org.eclipse.equinox.internal.p2.engine.Engine.perform(Engine.java:80)
+	at org.eclipse.equinox.internal.p2.engine.Engine.perform(Engine.java:48)
+	at org.eclipse.equinox.p2.operations.ProvisioningSession.performProvisioningPlan(ProvisioningSession.java:181)
+	at org.eclipse.equinox.p2.operations.ProfileModificationJob.runModal(ProfileModificationJob.java:76)
+	at org.eclipse.equinox.p2.operations.ProvisioningJob.run(ProvisioningJob.java:188)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.equinox.p2.artifact.repository 4 0 2022-08-17 12:23:02.980
+!MESSAGE Unexpected error loading extension: org.eclipse.equinox.p2.artifact.repository.simpleRepository
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.osgi.framework.BundleContext.createFilter(String)" because "context" is null
+	at org.osgi.util.tracker.ServiceTracker.<init>(ServiceTracker.java:187)
+	at org.osgi.util.tracker.ServiceTracker.<init>(ServiceTracker.java:250)
+	at org.eclipse.ecf.internal.provider.filetransfer.httpclient45.Activator.getHttpClientFactory(Activator.java:241)
+	at org.eclipse.ecf.internal.provider.filetransfer.httpclient45.Activator.getBrowseHttpClient(Activator.java:266)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientBrowseFileTransferFactory$1.sendBrowseRequest(HttpClientBrowseFileTransferFactory.java:59)
+	at org.eclipse.ecf.provider.filetransfer.browse.MultiProtocolFileSystemBrowserAdapter.sendBrowseRequest(MultiProtocolFileSystemBrowserAdapter.java:97)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileInfoReader.sendBrowseRequest(FileInfoReader.java:184)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileInfoReader.getRemoteFiles(FileInfoReader.java:109)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileInfoReader.getRemoteFile(FileInfoReader.java:125)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileInfoReader.getLastModified(FileInfoReader.java:130)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.getLastModified(RepositoryTransport.java:249)
+	at org.eclipse.oomph.p2.internal.core.CachingTransport.delegateGetLastModified(CachingTransport.java:397)
+	at org.eclipse.oomph.p2.internal.core.CachingTransport.getLastModified(CachingTransport.java:346)
+	at org.eclipse.equinox.internal.p2.repository.CacheManager.getLastModified(CacheManager.java:276)
+	at org.eclipse.equinox.internal.p2.repository.CacheManager.createCache(CacheManager.java:230)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepositoryFactory.getLocalFile(SimpleArtifactRepositoryFactory.java:68)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepositoryFactory.load(SimpleArtifactRepositoryFactory.java:92)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepositoryFactory.load(SimpleArtifactRepositoryFactory.java:80)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.factoryLoad(ArtifactRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:787)
+	at jdk.internal.reflect.GeneratedMethodAccessor51.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:119)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:447)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:230)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Artifact.loadRepository(CachingRepositoryManager.java:586)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.loadRepository(ArtifactRepositoryManager.java:131)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.loadRepository(ArtifactRepositoryManager.java:125)
+	at org.eclipse.equinox.p2.engine.ProvisioningContext.getLoadedRepository(ProvisioningContext.java:189)
+	at org.eclipse.equinox.p2.engine.ProvisioningContext.getLoadedArtifactRepositories(ProvisioningContext.java:163)
+	at org.eclipse.equinox.p2.engine.ProvisioningContext.getArtifactRepositories(ProvisioningContext.java:149)
+	at org.eclipse.equinox.internal.p2.engine.DownloadManager.getArtifactRepositories(DownloadManager.java:110)
+	at org.eclipse.equinox.internal.p2.engine.DownloadManager.start(DownloadManager.java:95)
+	at org.eclipse.equinox.internal.p2.engine.phases.Collect.completePhase(Collect.java:111)
+	at org.eclipse.equinox.internal.p2.engine.Phase.postPerform(Phase.java:254)
+	at org.eclipse.equinox.internal.p2.engine.Phase.perform(Phase.java:105)
+	at org.eclipse.equinox.internal.p2.engine.PhaseSet.perform(PhaseSet.java:50)
+	at org.eclipse.equinox.internal.p2.engine.Engine.perform(Engine.java:80)
+	at org.eclipse.equinox.internal.p2.engine.Engine.perform(Engine.java:48)
+	at org.eclipse.equinox.p2.operations.ProvisioningSession.performProvisioningPlan(ProvisioningSession.java:181)
+	at org.eclipse.equinox.p2.operations.ProfileModificationJob.runModal(ProfileModificationJob.java:76)
+	at org.eclipse.equinox.p2.operations.ProvisioningJob.run(ProvisioningJob.java:188)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.equinox.p2.engine 4 4 2022-08-17 12:23:03.696
+!MESSAGE An error occurred while committing the engine session for profile: C__Users_Sonia_eclipse_java-2021-09_eclipse.
+!SUBENTRY 1 org.eclipse.equinox.p2.engine 4 0 2022-08-17 12:23:03.696
+!MESSAGE An error occurred while undoing the org.eclipse.equinox.internal.p2.engine.phases.CheckTrust phase.
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.osgi.framework.BundleContext.getServiceReference(java.lang.Class)" because "context" is null
+	at org.eclipse.equinox.internal.p2.engine.phases.CertificateChecker.start(CertificateChecker.java:85)
+	at org.eclipse.equinox.internal.p2.engine.phases.CheckTrust.completePhase(CheckTrust.java:63)
+	at org.eclipse.equinox.internal.p2.engine.Phase.postPerform(Phase.java:254)
+	at org.eclipse.equinox.internal.p2.engine.EngineSession.rollBackPhase(EngineSession.java:253)
+	at org.eclipse.equinox.internal.p2.engine.EngineSession.rollback(EngineSession.java:159)
+	at org.eclipse.equinox.internal.p2.engine.Engine.perform(Engine.java:89)
+	at org.eclipse.equinox.internal.p2.engine.Engine.perform(Engine.java:48)
+	at org.eclipse.equinox.p2.operations.ProvisioningSession.performProvisioningPlan(ProvisioningSession.java:181)
+	at org.eclipse.equinox.p2.operations.ProfileModificationJob.runModal(ProfileModificationJob.java:76)
+	at org.eclipse.equinox.p2.operations.ProvisioningJob.run(ProvisioningJob.java:188)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.equinox.p2.engine 4 0 2022-08-17 12:23:03.696
+!MESSAGE An error occurred while undoing the org.eclipse.equinox.internal.p2.engine.phases.Collect phase.
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry.getProfileDataDirectory(String)" because "profileRegistry" is null
+	at org.eclipse.equinox.internal.p2.engine.EngineSession.getProfileDataDirectory(EngineSession.java:81)
+	at org.eclipse.equinox.internal.p2.engine.Phase.prePerform(Phase.java:117)
+	at org.eclipse.equinox.internal.p2.engine.EngineSession.rollBackPhase(EngineSession.java:233)
+	at org.eclipse.equinox.internal.p2.engine.EngineSession.rollback(EngineSession.java:182)
+	at org.eclipse.equinox.internal.p2.engine.Engine.perform(Engine.java:89)
+	at org.eclipse.equinox.internal.p2.engine.Engine.perform(Engine.java:48)
+	at org.eclipse.equinox.p2.operations.ProvisioningSession.performProvisioningPlan(ProvisioningSession.java:181)
+	at org.eclipse.equinox.p2.operations.ProfileModificationJob.runModal(ProfileModificationJob.java:76)
+	at org.eclipse.equinox.p2.operations.ProvisioningJob.run(ProvisioningJob.java:188)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.equinox.p2.engine 4 4 2022-08-17 12:23:03.702
+!MESSAGE An error occurred during the org.eclipse.equinox.internal.p2.engine.phases.CheckTrust phase.
+!SUBENTRY 1 org.eclipse.equinox.p2.engine 4 0 2022-08-17 12:23:03.702
+!MESSAGE session context was:(profile=C__Users_Sonia_eclipse_java-2021-09_eclipse, phase=org.eclipse.equinox.internal.p2.engine.phases.CheckTrust, operand=[R]org.eclipse.equinox.launcher 1.6.300.v20210813-1054 --> [R]org.eclipse.equinox.launcher 1.6.400.v20210924-0641, action=org.eclipse.equinox.internal.p2.touchpoint.eclipse.actions.CheckTrustAction).
+!SUBENTRY 1 org.eclipse.equinox.p2.engine 4 0 2022-08-17 12:23:03.702
+!MESSAGE Cannot invoke "org.eclipse.equinox.p2.repository.artifact.IArtifactRepositoryManager.loadRepository(java.net.URI, org.eclipse.core.runtime.IProgressMonitor)" because "manager" is null
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.eclipse.equinox.p2.repository.artifact.IArtifactRepositoryManager.loadRepository(java.net.URI, org.eclipse.core.runtime.IProgressMonitor)" because "manager" is null
+	at org.eclipse.equinox.internal.p2.touchpoint.eclipse.Util.getBundlePoolRepository(Util.java:88)
+	at org.eclipse.equinox.internal.p2.touchpoint.eclipse.Util.getAggregatedBundleRepository(Util.java:137)
+	at org.eclipse.equinox.internal.p2.touchpoint.eclipse.Util.getAggregatedBundleRepository(Util.java:110)
+	at org.eclipse.equinox.internal.p2.touchpoint.eclipse.actions.CheckTrustAction.execute(CheckTrustAction.java:59)
+	at org.eclipse.equinox.internal.p2.engine.Phase.mainPerform(Phase.java:186)
+	at org.eclipse.equinox.internal.p2.engine.Phase.perform(Phase.java:99)
+	at org.eclipse.equinox.internal.p2.engine.PhaseSet.perform(PhaseSet.java:50)
+	at org.eclipse.equinox.internal.p2.engine.Engine.perform(Engine.java:80)
+	at org.eclipse.equinox.internal.p2.engine.Engine.perform(Engine.java:48)
+	at org.eclipse.equinox.p2.operations.ProvisioningSession.performProvisioningPlan(ProvisioningSession.java:181)
+	at org.eclipse.equinox.p2.operations.ProfileModificationJob.runModal(ProfileModificationJob.java:76)
+	at org.eclipse.equinox.p2.operations.ProvisioningJob.run(ProvisioningJob.java:188)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SESSION 2022-08-17 12:23:05.050 -----------------------------------------------
+eclipse.buildId=4.21.0.I20210906-0500
+java.version=17
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -data file:/C:/Users/Sonia/Desktop/PairsMemoryGame/ -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.jface 2 0 2022-08-17 12:23:16.747
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-08-17 12:23:16.747
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4cd8db31,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@201a8ea7,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2022-08-17 12:23:26.927
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Sonia'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2022-08-17 13:16:43.434 -----------------------------------------------
+eclipse.buildId=4.21.0.I20210906-0500
+java.version=17
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2022-08-17 13:16:54.697
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jface 2 0 2022-08-17 13:17:01.730
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-08-17 13:17:01.731
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3c65f00e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3412a3fd,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2022-08-17 13:17:17.111
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Sonia'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2022-08-17 13:19:02.673 -----------------------------------------------
+eclipse.buildId=4.21.0.I20210906-0500
+java.version=17
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2022-08-17 13:19:10.188
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jface 2 0 2022-08-17 13:19:15.892
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-08-17 13:19:15.892
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@24258b54,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@493968a9,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2022-08-17 13:19:31.773
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Sonia'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jdt.ui 4 0 2022-08-17 17:04:43.523
+!MESSAGE Error retrieving proposal text.
+Display string:
+com
+Pattern:
+card
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: begin 0, end 4, length 3
+	at java.base/java.lang.String.checkBoundsBeginEnd(String.java:4601)
+	at java.base/java.lang.String.substring(String.java:2704)
+	at org.eclipse.jdt.internal.ui.text.java.AbstractJavaCompletionProposal.getPatternMatchRule(AbstractJavaCompletionProposal.java:929)
+	at org.eclipse.jdt.internal.ui.text.java.LazyJavaCompletionProposal.getStyledDisplayString(LazyJavaCompletionProposal.java:483)
+	at org.eclipse.jface.text.contentassist.CompletionProposalPopup.handleSetData(CompletionProposalPopup.java:879)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4237)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1060)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1084)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1069)
+	at org.eclipse.swt.widgets.Table.checkData(Table.java:1157)
+	at org.eclipse.swt.widgets.Table.wmNotifyChild(Table.java:6604)
+	at org.eclipse.swt.widgets.Control.wmNotify(Control.java:5807)
+	at org.eclipse.swt.widgets.Composite.wmNotify(Composite.java:1961)
+	at org.eclipse.swt.widgets.Control.WM_NOTIFY(Control.java:5375)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4809)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1480)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2264)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4966)
+	at org.eclipse.swt.internal.win32.OS.CallWindowProc(Native Method)
+	at org.eclipse.swt.widgets.Table.callWindowProc(Table.java:588)
+	at org.eclipse.swt.widgets.Table.callWindowProc(Table.java:454)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4854)
+	at org.eclipse.swt.widgets.Table.windowProc(Table.java:5815)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4958)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3624)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1041)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1440)
+
+!ENTRY org.eclipse.wb.core 4 4 2022-08-17 22:17:42.574
+!MESSAGE Designer [1.10.1.202203170939.202208172217]: class org.eclipse.wb.internal.core.model.property.Property$1 cannot be cast to class java.lang.Integer (org.eclipse.wb.internal.core.model.property.Property$1 is in unnamed module of loader org.eclipse.osgi.internal.loader.EquinoxClassLoader @54644470; java.lang.Integer is in module java.base of loader 'bootstrap')
+!STACK 0
+java.lang.ClassCastException: class org.eclipse.wb.internal.core.model.property.Property$1 cannot be cast to class java.lang.Integer (org.eclipse.wb.internal.core.model.property.Property$1 is in unnamed module of loader org.eclipse.osgi.internal.loader.EquinoxClassLoader @54644470; java.lang.Integer is in module java.base of loader 'bootstrap')
+	at org.eclipse.wb.internal.swt.model.layout.form.FormAttachmentInfo.setPropertyExpression(FormAttachmentInfo.java:126)
+	at org.eclipse.wb.internal.swt.model.layout.form.FormAttachmentInfo$1.setPropertyExpression(FormAttachmentInfo.java:92)
+	at jdk.internal.reflect.GeneratedMethodAccessor148.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.wb.core.model.broadcast.BroadcastSupport$1.intercept(BroadcastSupport.java:208)
+	at org.eclipse.wb.core.model.broadcast.JavaEventListener$$EnhancerByCGLIB$$4fdc4637.setPropertyExpression(<generated>)
+	at org.eclipse.wb.internal.core.model.property.GenericPropertyImpl.setExpression(GenericPropertyImpl.java:278)
+	at org.eclipse.wb.internal.core.model.property.GenericPropertyImpl.setValueEx(GenericPropertyImpl.java:496)
+	at org.eclipse.wb.internal.core.model.property.GenericPropertyImpl$1.run(GenericPropertyImpl.java:209)
+	at org.eclipse.wb.internal.core.utils.execution.ExecutionUtils.run(ExecutionUtils.java:324)
+	at org.eclipse.wb.internal.core.model.property.GenericPropertyImpl.setValue(GenericPropertyImpl.java:207)
+	at org.eclipse.wb.internal.core.model.property.editor.IntegerPropertyEditor.setEditorText(IntegerPropertyEditor.java:66)
+	at org.eclipse.wb.internal.core.model.property.editor.AbstractTextPropertyEditor.toProperty(AbstractTextPropertyEditor.java:183)
+	at org.eclipse.wb.internal.core.model.property.editor.AbstractTextPropertyEditor.deactivate(AbstractTextPropertyEditor.java:85)
+	at org.eclipse.wb.internal.core.model.property.table.PropertyTable.deactivateEditor(PropertyTable.java:550)
+	at org.eclipse.wb.internal.core.model.property.editor.AbstractTextPropertyEditor.lambda$0(AbstractTextPropertyEditor.java:66)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4237)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1060)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1084)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1065)
+	at org.eclipse.swt.widgets.Control.sendFocusEvent(Control.java:2949)
+	at org.eclipse.swt.widgets.Widget.wmKillFocus(Widget.java:1872)
+	at org.eclipse.swt.widgets.Control.WM_KILLFOCUS(Control.java:5176)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4787)
+	at org.eclipse.swt.widgets.Text.windowProc(Text.java:2681)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4966)
+	at org.eclipse.swt.internal.win32.OS.SetFocus(Native Method)
+	at org.eclipse.swt.widgets.Control.forceFocus(Control.java:1100)
+	at org.eclipse.wb.internal.core.model.property.table.PropertyTable$5.mouseDown(PropertyTable.java:174)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:196)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4237)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1060)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4054)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3626)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1041)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1440)
+!SESSION 2022-08-18 09:52:44.356 -----------------------------------------------
+eclipse.buildId=4.21.0.I20210906-0500
+java.version=17
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.jface 2 0 2022-08-18 09:53:59.450
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-08-18 09:53:59.450
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1c0cf193,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3dd66ff5,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2022-08-18 09:54:27.292
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Sonia'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.

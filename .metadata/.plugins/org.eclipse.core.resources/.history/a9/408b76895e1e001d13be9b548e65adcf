@@ -1,0 +1,257 @@
+package game;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.events.SelectionEvent;
+import org.eclipse.swt.events.SelectionListener;
+import org.eclipse.swt.layout.FormAttachment;
+import org.eclipse.swt.layout.FormData;
+import org.eclipse.swt.layout.FormLayout;
+import org.eclipse.swt.layout.GridData;
+import org.eclipse.swt.layout.GridLayout;
+import org.eclipse.swt.widgets.Button;
+import org.eclipse.swt.widgets.Combo;
+import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Display;
+import org.eclipse.swt.widgets.Event;
+import org.eclipse.swt.widgets.Label;
+import org.eclipse.swt.widgets.Listener;
+import org.eclipse.swt.widgets.Shell;
+import org.eclipse.swt.widgets.Text;
+
+import models.ButtonWithNumber;
+import models.Level;
+
+public class GameApplication {
+
+	private Shell shell;
+	private List<Level> levels;
+	private Composite info;
+	private Combo combo;
+	private Level level;
+	private boolean isAppRunning = true;
+	private Composite game;
+	private List<ButtonWithNumber> cards = new ArrayList<ButtonWithNumber>();
+	private List<ButtonWithNumber> selectedButtons = new ArrayList<ButtonWithNumber>();
+	private int pairs = 0;
+
+	public static void main(String[] args) {
+
+		Display display = new Display();
+		GameApplication app = new GameApplication();
+		app.open(display);
+	}
+
+	private Thread checkPair(List<ButtonWithNumber> selectedButtons) {
+		Runnable pairChecker = new Runnable() {
+
+			@Override
+			public void run() {
+
+				while (isAppRunning) {
+					if (selectedButtons.size() >= 2) {
+
+						Display.getDefault().asyncExec(new Runnable() {
+							@Override
+							public void run() {
+								if (selectedButtons.get(0).getNumber() == selectedButtons.get(1).getNumber()) {
+									selectedButtons.get(0).getButton().setEnabled(false);
+									selectedButtons.get(1).getButton().setEnabled(false);
+									pairs++;
+									if (pairs == level.getLines() * level.getColums() / 2) {
+										System.out.println("GG YOU WON");
+									}
+
+								} else {
+									selectedButtons.get(0).getButton().setText("");
+									selectedButtons.get(1).getButton().setText("");
+								}
+								selectedButtons.removeAll(selectedButtons);
+
+							}
+						});
+					}
+
+					try {
+						Thread.sleep(750);
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
+				}
+			}
+		};
+		return new Thread(pairChecker);
+	}
+
+	private void open(Display display) {
+
+		Thread thread = checkPair(selectedButtons);
+		thread.start();
+
+		shell = new Shell();
+		shell.addListener(SWT.RESIZE, new Listener() {
+
+			@Override
+			public void handleEvent(Event event) {
+				shell.requestLayout();
+				shell.redraw();
+			}
+		});
+
+		shell.setText("Pairs Memory Game");
+		shell.setLayout(new FormLayout());
+
+		Composite buttons = createButtonLayout(shell);
+		createButtons(buttons);
+		Composite infoComposite = createInfoContent(shell);
+
+		shell.setSize(800, 500);
+
+		game = new Composite(shell, SWT.NONE);
+		FormData fd_composite = new FormData();
+		fd_composite.bottom = new FormAttachment(buttons);
+		fd_composite.top = new FormAttachment(info);
+		fd_composite.right = new FormAttachment(100);
+		fd_composite.left = new FormAttachment(0);
+		game.setLayoutData(fd_composite);
+
+		shell.open();
+		shell.layout();
+		while (!shell.isDisposed()) {
+			if (!display.readAndDispatch()) {
+				display.sleep();
+			}
+		}
+		display.dispose();
+		isAppRunning = false;
+	}
+
+	private Composite createButtonLayout(Shell shell) {
+		Composite buttons = new Composite(shell, SWT.BORDER);
+		FormData fd_buttons = new FormData();
+		fd_buttons.left = new FormAttachment(0);
+		fd_buttons.right = new FormAttachment(100);
+		fd_buttons.top = new FormAttachment(100, -60);
+		fd_buttons.bottom = new FormAttachment(100);
+		buttons.setLayout(new FormLayout());
+		buttons.setLayoutData(fd_buttons);
+		return buttons;
+	}
+
+	private void createButtons(Composite buttons) {
+		Button startButton = new Button(buttons, SWT.PUSH);
+		startButton.setText("Start");
+		startButton.addListener(SWT.Selection, new Listener() {
+			@Override
+			public void handleEvent(Event arg0) {
+				int index = combo.getSelectionIndex();
+				if (index != -1) {
+					level = levels.get(index);
+					generateCards(level);
+				}
+
+			}
+		});
+		Button leaderBoardButton = new Button(buttons, SWT.PUSH);
+		leaderBoardButton.setText("LeaderBoard");
+		FormData fd = new FormData();
+		fd.left = new FormAttachment(buttons, 20);
+		fd.top = new FormAttachment(buttons, 10);
+		startButton.setLayoutData(fd);
+
+		FormData fd2 = new FormData();
+		fd2.right = new FormAttachment(100, -20);
+		fd2.top = new FormAttachment(buttons, 10);
+		leaderBoardButton.setLayoutData(fd2);
+	}
+
+	private Composite createInfoContent(Shell shell) {
+		info = new Composite(shell, SWT.BORDER);
+		FormData fd_info = new FormData();
+		fd_info.top = new FormAttachment(0);
+		fd_info.left = new FormAttachment(0);
+		fd_info.right = new FormAttachment(100);
+		fd_info.bottom = new FormAttachment(0, 120);
+		info.setLayoutData(fd_info);
+
+		Label playerNameLable = new Label(info, SWT.NONE);
+		playerNameLable.setBounds(200, 20, 100, 30);
+		playerNameLable.setText("Player name");
+
+		combo = new Combo(info, SWT.NONE);
+		combo.setLocation(270, 60);
+		combo.setSize(200, 30);
+		levels = createLevels();
+		for (Level l : levels) {
+			combo.add(l.getName());
+		}
+
+		Text playerName = new Text(info, SWT.BORDER);
+		playerName.setBounds(320, 20, 150, 30);
+
+		Label level = new Label(info, SWT.NONE);
+		level.setBounds(200, 60, 100, 30);
+		level.setText("Level");
+
+		return info;
+	}
+
+	private List<Level> createLevels() {
+
+		List<Level> levels = new ArrayList<>();
+		levels.add(new Level("EASY", 2, 4));
+		levels.add(new Level("NORMAL", 6, 6));
+		levels.add(new Level("HARD", 6, 8));
+
+		return levels;
+	}
+
+	private void generateCards(Level level) {
+
+		int lines = level.getLines();
+		int columns = level.getColums();
+		int max = lines * columns / 2;
+		System.out.println(lines + " " + columns);
+		game.dispose();
+		game.setLayout(new GridLayout(columns, true));
+//		game.redraw();
+//		cards.removeAll(cards);
+//		cards.stream().forEach(b -> b.getButton().dispose());
+
+		ArrayList<Integer> numbers = new ArrayList<Integer>();
+		for (int i = 1; i <= max; i++) {
+			numbers.add((Integer) i);
+			numbers.add((Integer) i);
+		}
+		Collections.shuffle(numbers);
+
+		for (int i = 0; i < lines; i++) {
+			for (int j = 0; j < columns; j++) {
+				Button button = new Button(game, SWT.PUSH);
+				button.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
+				int number = i * columns + j;
+				ButtonWithNumber buttonWithNumber = new ButtonWithNumber(button, numbers.get(number));
+				cards.add(buttonWithNumber);
+				button.addSelectionListener(new SelectionListener() {
+
+					@Override
+					public void widgetSelected(SelectionEvent e) {
+						button.setText("" + numbers.get(number));
+						selectedButtons.add(buttonWithNumber);
+					}
+
+					@Override
+					public void widgetDefaultSelected(SelectionEvent e) {
+						// TODO Auto-generated method stub
+
+					}
+				});
+			}
+		}
+		game.requestLayout();
+	}
+
+}

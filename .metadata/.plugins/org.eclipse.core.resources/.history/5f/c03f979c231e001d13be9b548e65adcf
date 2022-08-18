@@ -1,0 +1,9 @@
+package models;
+
+public class Level {
+
+	private String name;
+	private int colums;
+	private int lines;
+
+}
